@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Receipt</title>
+	</head>
+	<body>
+		<h1>Receipt</h1>
+		<div>
+			<div th:if="${receipt.items != null and not #lists.isEmpty(receipt.items)}">
+				<th:block th:each="data, iterStat : ${receipt.items}">
+					<span  th:text="${data.name + ' ' + data.price}"></span>
+					<br/>
+				</th:block>
+			</div>	
+			<br/>
+			<div>
+				<span th:text="${'Sales Taxes: ' + receipt.taxes}"></span>
+			</div>
+			<div>
+				<span th:text="${'Total: ' + receipt.totalPrice}"></span>
+			</div> 
+		</div>
+	</body>
+</html>
