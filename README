@@ -1,0 +1,19 @@
+URL: http://localhost:8080/receipt
+body:
+[
+    {
+        "name": "book",
+        "kind": 0,
+        "price": 12.49
+    },
+    {
+        "name": "music CD",
+        "kind": 3,
+        "price": 14.99
+    },
+    {
+        "name": "chocolate bar",
+        "kind": 1,
+        "price": 0.85
+    }
+]
